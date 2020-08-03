@@ -11,6 +11,8 @@
         android:id="@+id/result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="right"
+        android:padding="15dp"
         android:textSize="40sp"
         android:enabled="false"/>
 
@@ -37,11 +39,11 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="50sp"
+            android:textSize="60sp"
             android:layout_margin="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:text="/"
+            android:text="÷"
             android:background="@drawable/buttonstytle"
             android:textColor="#ffffff"/>
         <Button
@@ -52,8 +54,8 @@
             android:layout_margin="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:textSize="50sp"
-            android:text="*"
+            android:textSize="60sp"
+            android:text="×"
             android:background="@drawable/buttonstytle"
             android:textColor="#ffffff"/>
         <Button
@@ -122,8 +124,10 @@
             android:layout_margin="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:textSize="50sp"
-            android:text="-"
+            android:textSize="70sp"
+            android:padding="5dp"
+            android:text="−"
+            android:textAllCaps="false"
             android:background="@drawable/buttonstytle"
             android:textColor="#ffffff"/>
     </LinearLayout>
@@ -178,7 +182,7 @@
             android:layout_margin="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:textSize="50sp"
+            android:textSize="60sp"
             android:text="+"
             android:background="@drawable/buttonstytle"
             android:textColor="#ffffff"/>
@@ -270,11 +274,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_weight="1"
+                    android:text="."
                     android:layout_margin="5dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:text="."
-                    android:textSize="50sp"
+                    android:textSize="60sp"
                     android:background="@drawable/buttonstytle"
                     android:textColor="#ffffff"/>
             </LinearLayout>
@@ -290,13 +294,10 @@
                     android:layout_margin="5dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:textSize="50sp"
+                    android:textSize="60sp"
                     android:background="@drawable/buttonstytle"
                     android:textColor="#ffffff"/>
             </LinearLayout>
-
         </LinearLayout>
-
     </LinearLayout>
-
 </LinearLayout>

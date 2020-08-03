@@ -125,6 +125,11 @@ public class MainActivity extends AppCompatActivity {
                     show_equation.deleteCharAt(show_equation.length() - 1);
                     result.setText(show_equation);
                 }
+                else{
+                    show_equation.delete(0,show_equation.length());
+                    calculate_equation.clear();
+                    result.setText("");
+                }
             }
         });
         point.setOnClickListener(new View.OnClickListener() {
@@ -174,14 +179,14 @@ public class MainActivity extends AppCompatActivity {
         mul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                show_equation.append("*");
+                show_equation.append("×");
                 result.setText(show_equation);
             }
         });
         div.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                show_equation.append("/");
+                show_equation.append("÷");
                 result.setText(show_equation);
             }
         });
@@ -193,14 +198,14 @@ public class MainActivity extends AppCompatActivity {
         switch (operator1){
             case '+':{o1=0;break;}
             case '-':{o1=0;break;}
-            case '*':{o1=1;break;}
-            case '/':{o1=1;break;}
+            case '×':{o1=1;break;}
+            case '÷':{o1=1;break;}
         }
         switch (operator2){
             case '+':{o2=0;break;}
             case '-':{o2=0;break;}
-            case '*':{o2=1;break;}
-            case '/':{o2=1;break;}
+            case '×':{o2=1;break;}
+            case '÷':{o2=1;break;}
         }
         if(o1<=o2)
         {
@@ -218,7 +223,7 @@ public class MainActivity extends AppCompatActivity {
         for(int i=0;i<equation.size();i++)
         {
             String temp4=(String) equation.get(i);
-            if(temp4.equals("+")||temp4.equals("-")||temp4.equals("*")||temp4.equals("/"))
+            if(temp4.equals("+")||temp4.equals("-")||temp4.equals("×")||temp4.equals("÷"))
             {
                 if(operator.size()>0)
                 {
@@ -233,8 +238,8 @@ public class MainActivity extends AppCompatActivity {
                         switch (temp5.charAt(0)){
                             case '+':{result=temp2+temp3;operand.add(String.valueOf(result));break;}
                             case '-':{result=temp2-temp3;operand.add(String.valueOf(result));break;}
-                            case '*':{result=temp2*temp3;operand.add(String.valueOf(result));break;}
-                            case '/':{result=temp2/temp3;operand.add(String.valueOf(result));break;}
+                            case '×':{result=temp2*temp3;operand.add(String.valueOf(result));break;}
+                            case '÷':{result=temp2/temp3;operand.add(String.valueOf(result));break;}
                         }
                         if(operator.size()>0)
                         {
@@ -261,8 +266,8 @@ public class MainActivity extends AppCompatActivity {
                     switch (temp6.charAt(0)){
                         case '+':{result=temp2+temp3;operand.add(String.valueOf(result));break;}
                         case '-':{result=temp2-temp3;operand.add(String.valueOf(result));break;}
-                        case '*':{result=temp2*temp3;operand.add(String.valueOf(result));break;}
-                        case '/':{result=temp2/temp3;operand.add(String.valueOf(result));break;}
+                        case '×':{result=temp2*temp3;operand.add(String.valueOf(result));break;}
+                        case '÷':{result=temp2/temp3;operand.add(String.valueOf(result));break;}
                     }
                 }
             }
